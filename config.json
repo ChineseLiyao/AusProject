@@ -27,14 +27,14 @@
     ],
     "team": [
         {
-            "name": "Liyao",
-            "role": "Web Developer",
-            "avatar": "http://q1.qlogo.cn/g?b=qq&nk=3168940165&s=100"
-        },
-        {
             "name": "New Sky",
             "role": "Plugin Developer",
             "avatar": "http://q1.qlogo.cn/g?b=qq&nk=1283108811&s=100"
+        },
+        {
+            "name": "Liyao",
+            "role": "Web Developer",
+            "avatar": "http://q1.qlogo.cn/g?b=qq&nk=3168940165&s=100"
         }
     ],
     "footer_links": {
