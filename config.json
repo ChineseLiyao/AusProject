@@ -14,11 +14,11 @@
         {
             "id": "ausweis",
             "name": "Ausweis",
-            "tag": "Guard",
+            "tag": "Protect",
             "icon": "static/img/ausweis.png",
             "desc": "A Bukkit plugin that integrates Cloudflare Turnstile for player verification.",
             "version": "1.8.8 - Latest",
-            "allows": "all clients",
+            "allows": "-",
             "benefits": "Anti Fake Player by Cloudflare.",
             "download_url": "https://github.com/Nskawa/AusWeisPlugin/releases/download/1.0/AusWeis-1.0.jar",
             "wiki_url": "https://github.com/Nskawa/AusWeisPlugin",
