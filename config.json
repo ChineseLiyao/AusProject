@@ -20,7 +20,7 @@
             "version": "1.8.8 - Latest",
             "allows": "all clients",
             "benefits": "Anti Fake Player by Cloudflare.",
-            "download_url": "https://example.com/download/ausweis.jar",
+            "download_url": "https://github.com/Nskawa/AusWeisPlugin/releases/download/1.0/AusWeis-1.0.jar",
             "wiki_url": "",
             "api_url": ""
         }
