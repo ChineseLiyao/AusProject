@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{ cfg.site.name }}</title>
+    <style>
+        :root { --bg: #121212; --nav: #1a1a1a; --accent: #00b4d8; --text: #eee; --dim: #aaa; }
+        html, body { margin: 0; padding: 0; height: 100%; }
+        body { font-family: 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); display: flex; flex-direction: column; }
+        
+        /* Nav */
+        nav { background: var(--nav); height: 65px; display: flex; align-items: center; padding: 0 10%; border-bottom: 1px solid #333; justify-content: space-between; position: sticky; top:0; z-index:100; }
+        .nav-left { display: flex; align-items: center; gap: 15px; text-decoration: none; color: white; }
+        .logo { width: 45px; height: 45px; }
+        .nav-links { display: flex; gap: 25px; list-style: none; }
+        .nav-links a { color: var(--dim); text-decoration: none; font-size: 15px; transition: 0.3s; }
+        .nav-links a:hover { color: var(--accent); }
+
+        /* Container */
+        .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; flex: 1; }
+
+        /* Footer */
+        footer { background: var(--nav); border-top: 1px solid #333; padding: 50px 10%; margin-top: 50px; flex-shrink: 0; }
+        .f-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; }
+        .f-col h4 { color: var(--accent); margin-bottom: 15px; }
+        .f-col ul { list-style: none; padding: 0; line-height: 2; }
+        .f-col a { color: var(--dim); text-decoration: none; font-size: 14px; }
+    </style>
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <nav>
+        <a href="/" class="nav-left">
+            <img src="{{ cfg.site.logo }}" class="logo">
+            <span style="font-weight:bold; font-size:20px;">{{ cfg.site.name }}</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/download">Download</a></li>
+            <li><a href="/team">Team</a></li>
+            <li><a href="{{ cfg.site.github }}">GitHub</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+
+    <footer>
+        <div class="f-grid">
+            {% for title, links in cfg.footer_links.items() %}
+            <div class="f-col">
+                <h4>{{ title }}</h4>
+                <ul>{% for link in links %}<li><a href="{{ link[1] }}">{{ link[0] }}</a></li>{% endfor %}</ul>
+            </div>
+            {% endfor %}
+        </div>
+        <p style="text-align:center; color:#444; margin-top:40px;">© 2026 {{ cfg.site.name }}</p>
+    </footer>
+</body>
+</html>

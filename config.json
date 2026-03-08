@@ -1,0 +1,64 @@
+{
+    "site": {
+        "name": "AusJava Project",
+        "logo": "static/img/logo.png",
+        "github": "https://github.com/ChineseLiyao"
+    },
+    "hero": {
+        "title": "Do you need a systematic set of Minecraft server plugins?",
+        "text": "AusProject provides well-supported server plugins covering multiple areas, making it your best choice for starting a server.",
+        "guide_text": "Join our Discord server",
+        "guide_link": "https://discord.gg/fz9HbeQ9"
+    },
+    "projects": [
+        {
+            "id": "ausweis",
+            "name": "Ausweis",
+            "tag": "Guard",
+            "icon": "static/img/ausweis.png",
+            "desc": "A Bukkit plugin that integrates Cloudflare Turnstile for player verification.",
+            "version": "1.8.8 - Latest",
+            "allows": "all clients",
+            "benefits": "Anti Fake Player by Cloudflare.",
+            "download_url": "https://example.com/download/ausweis.jar",
+            "wiki_url": "",
+            "api_url": ""
+        }
+    ],
+    "team": [
+        {
+            "name": "Liyao",
+            "role": "Web Developer",
+            "avatar": "http://q1.qlogo.cn/g?b=qq&nk=3168940165&s=100"
+        },
+        {
+            "name": "New Sky",
+            "role": "Plugin Developer",
+            "avatar": "http://q1.qlogo.cn/g?b=qq&nk=1283108811&s=100"
+        }
+    ],
+    "footer_links": {
+        "Community": [
+            [
+                "Discord",
+                "https://discord.gg/fz9HbeQ9"
+            ],
+            [
+                "GitHub",
+                "https://github.com/ChineseLiyao"
+            ]
+        ],
+        "Organization": [
+            [
+                "Our Team",
+                "/team"
+            ]
+        ],
+        "Friend link": [
+            [
+                "LiyaoUniversity",
+                "lya.bz"
+            ]
+        ]
+    }
+}

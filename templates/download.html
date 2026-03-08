@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+<style>
+    .container { max-width: 1200px !important; }
+    .download-table { width: 100%; border-collapse: collapse; margin-top: 30px; table-layout: fixed; }
+    .download-table th { padding: 15px; border-bottom: 2px solid #333; text-align: left; color: var(--dim); }
+    .download-table td { padding: 15px; border-bottom: 1px solid #222; }
+    .download-table th:nth-child(1), .download-table td:nth-child(1) { width: 35%; }
+    .download-table th:nth-child(2), .download-table td:nth-child(2) { width: 20%; }
+    .download-table th:nth-child(3), .download-table td:nth-child(3) { width: 30%; }
+    .download-table th:nth-child(4), .download-table td:nth-child(4) { width: 15%; }
+    .plugin-cell { display: flex; align-items: center; gap: 10px; }
+</style>
+<h1 style="color:var(--accent)">Download Center</h1>
+<table class="download-table">
+    <tr>
+        <th>Plugin</th>
+        <th>Category</th>
+        <th>Version Support</th>
+        <th>Action</th>
+    </tr>
+    {% for p in cfg.projects %}
+    <tr>
+        <td>
+            <div class="plugin-cell">
+                <img src="{{ p.icon }}" width="30"> {{ p.name }}
+            </div>
+        </td>
+        <td>{{ p.tag }}</td>
+        <td>{{ p.version }}</td>
+        <td><a href="{{ p.download_url }}" style="color:var(--accent); text-decoration:none;">Get .JAR</a></td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

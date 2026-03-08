@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 style="color:var(--accent); text-align:center;">Our Team</h1>
+<div style="display:flex; justify-content:center; gap:30px; margin-top:50px; flex-wrap:wrap;">
+    {% for m in cfg.team %}
+    <div style="text-align:center; background:#1e1e1e; padding:30px; border-radius:10px; border:1px solid #333; width:220px;">
+        <img src="{{ m.avatar }}" style="width:80px; border-radius:50%; margin-bottom:15px; border:2px solid var(--accent);">
+        <h3 style="margin:0">{{ m.name }}</h3>
+        <p style="color:var(--dim); font-size:14px;">{{ m.role }}</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
